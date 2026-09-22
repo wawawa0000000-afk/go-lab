@@ -14,12 +14,17 @@ go-lab/
 ├── README.md       このファイル（使い方・コマンド）
 │
 ├── cmd/            ★ 自分で書く: 実行プログラム。1 テーマ = 1 ディレクトリ
-│   ├── hello/          サンプル
-│   ├── pra01/          型変換・関数の戻り値
-│   ├── pra02/          bool・論理演算子
-│   ├── pra03/          string・Replace・len/rune
-│   ├── pra04/          独自型・struct の生成・型変換
-│   └── pra05/          全演算子（算術・ビット・シフト）＋解説コメント
+│   ├── cleared/         ✅ クリア済み（完了した練習をここにまとめる）
+│   │   ├── hello/                   サンプル
+│   │   ├── pra01-type-conversion/   型変換・関数の戻り値
+│   │   ├── pra02-boolean/           bool・論理演算子
+│   │   ├── pra03-string/            string・Replace・len/rune
+│   │   ├── pra04-custom-type/       独自型・struct の生成・型変換
+│   │   ├── pra05-operators/         全演算子（算術・ビット・シフト）＋解説コメント
+│   │   ├── pra06-boolean-review/    bool 再演習
+│   │   ├── pra07-increment-decrement/ inc++ / dec--
+│   │   └── pra08-struct-method/     struct + メソッド（枠のみ・次はここ）
+│   └── pra09〜pra20/    ⬜ 未着手（空の雛形、テーマ未定）
 │
 ├── internal/       ★ 自分で書く: 再利用コード + テスト（モジュール外から import 不可）
 │   └── mathutil/       GCD・フィボナッチ（完成）
@@ -47,7 +52,7 @@ sudo apt-get install -y golang-go   # Go 1.26
 ## 基本コマンド
 
 ```bash
-go run ./cmd/hello        # 実行
+go run ./cmd/cleared/hello  # 実行
 go build ./...            # 全部ビルド（コンパイル通るか確認）
 go test ./...             # 全テスト
 go test -race ./...       # データ競合検出つき（おすすめ）
@@ -91,5 +96,5 @@ make lint      # gofmt + go vet
 ```bash
 sudo apt-get install -y delve   # または: go install github.com/go-delve/delve/cmd/dlv@latest
 dlv test ./internal/mathutil
-dlv debug ./cmd/hello
+dlv debug ./cmd/cleared/hello
 ```

@@ -1,7 +1,7 @@
 .PHONY: run build test cover bench lint fmt vet tidy clean
 
-run:              ## cmd/hello を実行
-	go run ./cmd/hello
+run:              ## cmd/cleared/hello を実行
+	go run ./cmd/cleared/hello
 
 build:            ## 全パッケージをビルド、バイナリは bin/ へ
 	go build -o bin/ ./...
