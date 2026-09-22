@@ -23,8 +23,8 @@ go-lab/
 │   │   ├── pra05-operators/         全演算子（算術・ビット・シフト）＋解説コメント
 │   │   ├── pra06-boolean-review/    bool 再演習
 │   │   ├── pra07-increment-decrement/ inc++ / dec--
-│   │   └── pra08-struct-method/     struct + メソッド（枠のみ・次はここ）
-│   └── pra09〜pra20/    ⬜ 未着手（空の雛形、テーマ未定）
+│   │   └── pra08-assignment/        複数変数の同時宣言・複数値を返す関数
+│   └── pra09〜pra20/    ⬜ 未着手（空の雛形）。次のテーマ: struct + メソッド
 │
 ├── internal/       ★ 自分で書く: 再利用コード + テスト（モジュール外から import 不可）
 │   └── mathutil/       GCD・フィボナッチ（完成）
