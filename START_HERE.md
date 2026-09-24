@@ -15,7 +15,7 @@ Claude は `CLAUDE.md` を自動で読むので、いきなり「続きやろう
 
 ---
 
-## いまどこ？（2026-09-23 時点）
+## いまどこ？（2026-09-24 時点）
 
 | 進捗 | 状態 |
 |---|---|
@@ -23,16 +23,17 @@ Claude は `CLAUDE.md` を自動で読むので、いきなり「続きやろう
 | 独自型・演算子・struct の生成 | ✅ 触った（`cmd/cleared/pra04-custom-type` `pra05-operators`） |
 | bool 再演習・インクリメント/デクリメント | ✅ 完了（`cmd/cleared/pra06-boolean-review` `pra07-increment-decrement`） |
 | 複数変数の同時宣言・複数値の戻り値 | ✅ 完了（`cmd/cleared/pra08-assignment`） |
+| 変数宣言3形式（`var` / カンマ列挙 / `var (...)`）・`:=` | ✅ 完了（`cmd/cleared/pra09-variable-declaration`） |
 | **struct + メソッド** | 🔜 **次はこれ**。お手本 `reference/02-structs-methods/` |
 | interface / goroutine / http / testing | ⬜ その先（`reference/03`〜`07`） |
 
 ### 次の具体的アクション
 1. `reference/02-structs-methods/README.md` と `main.go` を読む
 2. `go run ./reference/02-structs-methods` で動かす
-3. README 末尾の「練習課題」を **`cmd/pra09/main.go`**（作成済みの空の枠）に自分で書く
-4. `go run ./cmd/pra09` で確認
-5. Claude に「`pra09` を書いた。レビューして」と言う
-6. 書き終わって確認できたら `git mv cmd/pra09 cmd/cleared/pra09-struct-method` のようにリネームして `cleared/` へ移動する
+3. README 末尾の「練習課題」を **`cmd/pra10/main.go`**（作成済みの空の枠）に自分で書く
+4. `go run ./cmd/pra10` で確認
+5. Claude に「`pra10` を書いた。レビューして」と言う
+6. 書き終わって確認できたら `git mv cmd/pra10 cmd/cleared/pra10-struct-method` のようにリネームして `cleared/` へ移動する
 
 フォルダ名は `praNN-テーマ名` の形式（例: `pra01-type-conversion`）。
 **クリア（完了）した練習は `cmd/cleared/` の中に集約する**。`cmd/` 直下は未着手の空枠だけにして見通しをよくする。

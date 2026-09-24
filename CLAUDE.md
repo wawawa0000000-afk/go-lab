@@ -7,18 +7,18 @@ Go の練習用リポジトリ（`github.com/wawawa0000000-afk/go-lab`, go 1.25�
 
 ## ▶ 次にやること（セッション開始時はまずここ）
 
-最終更新: 2026-09-23
+最終更新: 2026-09-24
 
-- **到達点**: 基本型（bool / 数値 / string）＋ 演算子 ＋ 独自型・struct の生成 ＋ インクリメント/デクリメント ＋ 複数変数の同時宣言・代入まで。
+- **到達点**: 基本型（bool / 数値 / string）＋ 演算子 ＋ 独自型・struct の生成 ＋ インクリメント/デクリメント ＋ 複数変数の同時宣言・代入 ＋ 変数宣言3形式（`var` / 初期値付き `var` / `:=`）まで。
 - **次のテーマ**: **struct + メソッド**（値/ポインタレシーバ、埋め込み）。お手本 = `reference/02-structs-methods/`。
-- **次の練習枠**: `cmd/pra09`〜`cmd/pra20`（空の雛形）。どれか1つに `reference/02` の練習課題を書く。
-- オーナーが `reference/02` を読んで `cmd/pra09`（など）に自分で書く → Claude はレビュー役。
+- **次の練習枠**: `cmd/pra10`〜`cmd/pra20`（空の雛形）。どれか1つに `reference/02` の練習課題を書く。
+- オーナーが `reference/02` を読んで `cmd/pra10`（など）に自分で書く → Claude はレビュー役。
   書き終わってビルドが通ったら `praNN-struct-method` のようにリネームして `cmd/cleared/` へ移動する。
 
 ### フォルダ運用ルール
 
 - 命名: `cmd/praNN-テーマ名`（kebab-case の英単語）。中身を書き始めたら `git mv` でテーマ名を付ける。
-  テーマ未定の空の枠（`pra09`〜`pra20` など）は番号だけのままで OK。
+  テーマ未定の空の枠（`pra10`〜`pra20` など）は番号だけのままで OK。
 - **クリア（完了）済みは `cmd/cleared/` の中にまとめる**。`cmd/` 直下は未着手の空枠だけにして見通しをよくする。
   動作確認まで終わったら `git mv cmd/praNN-テーマ名 cmd/cleared/praNN-テーマ名`。
 
@@ -82,7 +82,9 @@ go vet ./...                             # 静的チェック（現状クリー�
 - `cmd/cleared/pra06-boolean-review` … bool、論理演算子 `&&` `||`（pra02 の再演習）。完了。
 - `cmd/cleared/pra07-increment-decrement` … `inc++` / `dec--`（インクリメント・デクリメント）。完了。
 - `cmd/cleared/pra08-assignment` … 複数変数の同時宣言（`:=`）、複数値を返す関数（`func fn() (int, int)`）。完了。
-- `cmd/pra09`〜`pra20` … 空の雛形。`cmd/` 直下に待機中。次のテーマは struct + メソッド。テーマが決まって書き終わったら `cleared/` へ移動しリネーム。
+- `cmd/cleared/pra09-variable-declaration` … 変数宣言の3形式（`var x int` / カンマ列挙 `var a, b, c int` / 丸括弧グルーピング `var (...)`）、初期値付き `var`、`:=`（関数 `syouryaku` `tyokusetu` に分けて比較）。完了。
+- `cmd/pra10`〜`pra20` … 空の雛形。`cmd/` 直下に待機中。次のテーマは struct + メソッド。テーマが決まって書き終わったら `cleared/` へ移動しリネーム。
+- VS Code 設定: Go ファイルは保存時に自動整形（`[go] editor.formatOnSave`）。ただし `files.autoSave: afterDelay` の自動保存では整形されない（`Ctrl+S` で整形）。
 - `docs/` … `go-basic-types.md`, `go-design-philosophy.md`, `学習ログ.md`, `進捗チェックリスト.md` 作成済み。
 - 未整形: `cmd/cleared/pra01-type-conversion`〜`pra04-custom-type`, `cmd/cleared/pra07-increment-decrement`（`gofmt -w .` で直せる。動作には影響なし）。
 
